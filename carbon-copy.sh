@@ -3,12 +3,13 @@ set -e
 
 # Ensure "pv" exists
 if ! hash pv 2>/dev/null; then
-    printf "pv not found. Try installing it with:\n\tbrew install pv\n\n";
+    printf 'pv not found. Try installing it with:\n\tbrew install pv\n\n';
+    exit 1;
 
 # Check args
 elif [ "${#}" -lt 2 ]; then
-    PROG=$(basename "${0}")
-    printf "Usage: ${PROG} <input device> <output file> [<block size>]\n\n";
+    printf 'Usage: %s <input device> <output file> [<block size>]\n\n' `basename "${0}"`;
+    exit 1;
 
 # Run
 else
