@@ -7,29 +7,24 @@ BOLD=$(tput bold)
 RED=$(tput setaf 1)
 RESET=$(tput sgr0)
 HR=$(head -c 79 < /dev/zero | tr '\0' '-')
-PROG=$(basename "${BASH_SOURCE[0]}")
+PROG=$(basename "${0}")
 
-#####################################
-# Print warning if exiv2 is missing #
-#####################################
-function exiv2_error {
+###################
+# Execute Program #
+###################
+
+# Ensure "exiv2" exists and print warning if isn't
+if ! hash exiv2 2>/dev/null; then
     cat <<EOF
 ${BOLD}${RED}[ERROR]${RESET} exiv2 not found! Please install and try again.
 ${HR}
 
-If you're using Homebrew you can fix this error by running:
+Try installing it with:
     brew install exiv2
-
-For more information on Homebrew see:
-    http://brew.sh/
-
 EOF
-}
 
-######################################
-# Print script info and instructions #
-######################################
-function usage {
+# Print help if requested or if no arguments have been given
+elif [[ $1 = '-h' || $1 = '--help' || (( $# < 1 )) ]]; then
     cat <<EOF
 ${PROG} - Remove all metadata from the supplied image files
 ${HR}
@@ -55,30 +50,10 @@ ${HR}
 ${PROG} file.jpg ...
 
 EOF
-}
-
-#######################
-# Anonymise arguments #
-#######################
-function anonymise {
-    for image in "$1"; do
-        exiv2 -v rm "$image";
-    done
-}
-
-###################
-# Execute Program #
-###################
-
-# Ensure exiv2 exists
-if ! hash exiv22 2>/dev/null; then
-    exiv2_error;
-
-# Print help if requested or if no arguments have been given
-elif [[ $1 = '-h' || $1 = '--help' || (( $# < 1 )) ]]; then
-    usage; 
 
 # Anonymise arguments
 else
-    anonymise "$@";
+    for image in "$@"; do
+        exiv2 -v rm "$image";
+    done
 fi
