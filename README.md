@@ -8,6 +8,7 @@ Useful [Bash](https://www.gnu.org/software/bash/) scripts for use on OS X with [
 * [beer.sh](beer.sh) - Update [Homebrew](http://brew.sh) and optionally cleanup
 * [carbon-copy.sh](carbon-copy.sh) - Create backups or copies of disks
 * [img-anonymise.sh](img-anonymise.sh) - Remove personally identifiable information from images
+* [secure-erase.sh](secure-erase.sh) - Securely erase USB flash drives
 
 ## Setup
 
