@@ -6,7 +6,7 @@ Useful [Bash](https://www.gnu.org/software/bash/) scripts for use on OS X with [
 
 * [avi-merge.sh](avi-merge.sh) - Merge two or more AVI files into one
 * [beer.sh](beer.sh) - Update [Homebrew](http://brew.sh) and optionally cleanup
-* [carbon-copy.sh](carbon-copy.sh) - Create a backup of a disk
+* [carbon-copy.sh](carbon-copy.sh) - Create backups or copies of disks
 * [img-anonymise.sh](img-anonymise.sh) - Remove personally identifiable information from images
 
 ## Setup
