@@ -1,6 +1,6 @@
 # Useful Scripts
 
-Useful [Bash](https://www.gnu.org/software/bash/) scripts for use on OS X with [Homebrew](http://brew.sh). Most of these are simply wrappers around other utilities with the appropriate options set for my use-case.
+Useful [Bash](https://www.gnu.org/software/bash/) scripts for use on [OS X](https://www.apple.com/osx/) with [Homebrew](http://brew.sh). Most of these are simply wrappers around other utilities with the appropriate options set for my use-case. Some, such as [avi-merge.sh](avi-merge.sh), are slightly more complicated so all bugs or suggestions are appreciated!
 
 ## Scripts
 
@@ -14,9 +14,15 @@ Useful [Bash](https://www.gnu.org/software/bash/) scripts for use on OS X with [
 
 ```bash
 git clone git@github.com:robhardwick/scripts.git ~/Documents/scripts
-echo 'export PATH="~/Documents/scripts:$PATH"' >> ~/.bash_profile
+echo 'PATH="$HOME/Documents/scripts:$PATH"' >> ~/.bash_profile
 source ~/.bash_profile
 ```
+
+The steps above do the following:
+
+1. Clone the repository (we use the `Documents` directory, feel free to change all instances of `/Documents` if you would like to use somewhere different under `$HOME`, i.e. another place under your home directory)
+2. Add the repository to your `$PATH` so the scripts above are available everywhere in [Bash](https://www.gnu.org/software/bash/)
+3. Reload your [Bash](https://www.gnu.org/software/bash/) configuration
 
 ## License
 
