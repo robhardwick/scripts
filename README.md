@@ -1,6 +1,6 @@
 # Useful Scripts
 
-Useful [Bash](https://www.gnu.org/software/bash/) scripts for use on [OS X](https://www.apple.com/osx/) with [Homebrew](http://brew.sh). Most of these are simply wrappers around other utilities with the appropriate options set for my use-case. Some, such as [avi-merge.sh](avi-merge.sh), are slightly more complicated so all bugs or suggestions are appreciated!
+My own [Bash](https://www.gnu.org/software/bash/) scripts that I use on [OS X](https://www.apple.com/osx/) with [Homebrew](http://brew.sh). Most of these are simply wrappers around other utilities with the appropriate options set for my use-case. However, some such as [avi-merge.sh](avi-merge.sh) or [secure-erase.sh](secure-erase.sh), are slightly more complicated. Any bugs or suggestions would be appreciated!
 
 ## Scripts
 
